@@ -1,0 +1,41 @@
+
+<form class="form-inline">
+    <div class="form-group">
+        <label for="cep">CEP</label>
+        <input type="number" 
+            autofocus class="form-control" 
+            id="cep" name="cep"
+            pattern="[0-9]">
+            <input type="reset">
+    </div>
+    <button type="submit"class="btn btn-default">
+        <span class="glyphicon glyphicon-search"></span>
+    </button>
+</form>
+
+<div id="resultado"></div>
+
+<div class="alert alert-danger" role="alert">Nenhum resultado encontrado, por favor verifique seu CEP.</div>
+
+</div>
+
+<script id="template" type="text/x-handlebars-template">
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>CEP</td>
+                <td>{{cep}}</td>
+            </tr>
+            <tr>
+                <td>Logradouro</td>
+                <td>{{logradouro}}</td>
+            </tr>
+            <tr>
+                <td>Localidade</td>
+                <td>{{localidade}}</td>
+            </tr>
+        </tbody>
+    </table>
+</script>
+
+<script src="js/index.js"></script>
